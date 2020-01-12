@@ -2,11 +2,11 @@
 
 CSV files from https://github.com/dashdotdotdashdotdot/Lines
 
-Canonical link: https://jaanga.github.io/demo/doug-d/render-csv-file/
+Canonical link: https://konturno.github.io/render-csv-file/
 
 * link that should always take you to latest version
 
-Read me link: https://github.com/jaanga/jaanga.github.io/tree/master/demo/doug-d/render-csv-file
+Read me link: https://github.com/konturno/konturno.github.io/tree/master/drender-csv-file
 
 ## Concept
 
