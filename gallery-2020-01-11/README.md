@@ -8,16 +8,16 @@ value='You are now in a GitHub web page view - Click this button to view this re
 # [konturno gallery 2020-01-11]( #README.md )
 
 
-### [Venus di milo ]( )
+## [Venus de Milo ]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/venus-lines-128.csv )
 
 
-### Albert Einstein
+## [Albert Einstein]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/albert-small-lines-256.csv )
 
 
-### Michelangelo's David
+## [Michelangelo's David]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/david-lines-128.csv)
 
 
-### Elefante
+## [Elefante]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/elefante-lines-128.csv)
 
 
 <!--
