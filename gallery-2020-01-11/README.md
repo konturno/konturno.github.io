@@ -57,7 +57,7 @@ _Venus de Milo_
 
 ### 2020-01-12
 
-This project started in November 2019 at the befhest of my then new friend DougD - AKA DashDotDotDashDotDot.
+This project started in November 2019 at the behest of my then new friend DougD - AKA DashDotDotDashDotDot.
 
 The question is: Given the data - XYZ coordinates that form a mesh of triangles, can you generate the XYZ coordinates for the contour line that closely fits the original data.
 
@@ -69,7 +69,7 @@ The challenge now is to make interesting things to look at using these technique
 
 There is much more to be said about the genre. About the technology. About the art. About the next steps. And much much more
 
-But now it's time for bed
+But now it's time for bed...
 
 
 
