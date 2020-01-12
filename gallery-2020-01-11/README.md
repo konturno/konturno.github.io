@@ -1,11 +1,11 @@
-<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://konturno.github.io/ "View file as a web page." ) </span>
+<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://konturno.github.io/gallery-2020-01-11 "View file as a web page." ) </span>
 
 
-<div><input type=button onclick="window.location.href='https://github.com/konurno/konturno.github.io/cookbook-threejs/0-templates/README.md'";
+<div><input type=button onclick="window.location.href='https://github.com/konturno/konturno.github.io/tree/master/gallery-2020-01-11'";
 value='You are now in a GitHub web page view - Click this button to view this read me file as source code' ></div>
 
 
-# [konturno gallery 2020-01-11]( #xxxxxx/README.md )
+# [konturno gallery 2020-01-11]( #README.md )
 
 
 ### [Venus di milo ]( )
