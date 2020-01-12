@@ -11,7 +11,7 @@ DLM.getMenu = function () {
 
 	const htm =
 		`
-<details>
+<details open>
 
 	<summary >Draw mesh lines</summary>
 

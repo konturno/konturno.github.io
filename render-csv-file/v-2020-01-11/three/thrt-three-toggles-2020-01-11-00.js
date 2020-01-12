@@ -93,7 +93,7 @@ THRT.toggleAxesHelper = function () {
 
 
 
-THRT.toggleGroundHelper = function ( position = THR.scene.position.clone(), elevation = -51) {
+THRT.toggleGroundHelper = function ( position = THR.scene.position.clone(), elevation = -50.1) {
 
 	// move to THRT but z min should be zero
 
