@@ -7,7 +7,7 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 # [konturno gallery 2020-01-11]( #README.md )
 
-_"Konturni" means "contour" in Esperanto._
+_"Konturno" means "contour" in Esperanto._
 
 Our motto is "drop us a line"
 
@@ -46,7 +46,7 @@ Click the '⌂' button at lower right to come back here.
 <br>
 
 <iframe src=https://konturno.github.io/render-csv-file/ width=100% height=500px >Iframes are not viewable in GitHub source code view</iframe>
-_render csv file_
+_Venus de Milo_
 
 ### Full Screen: [render csv file]( https://konturno.github.io/render-csv-file/ )
 
@@ -67,7 +67,7 @@ The challenge now is to make interesting things to look at using these technique
 
 ***
 
-There is much more to be said about the genre. About the technology. About the art. about the next steps. And much much more
+There is much more to be said about the genre. About the technology. About the art. About the next steps. And much much more
 
 But now it's time for bed
 
@@ -86,6 +86,7 @@ But now it's time for bed
 * Allow the models to be animated
 * Play with the physics
 * Use what is happening in the scene to generate music
+* Allow you to to do even more
 
 
 </details>
@@ -102,6 +103,7 @@ But now it's time for bed
 </details>
 
 <details open >
+
 <summary>Links of interest</summary>
 
 DashDotDotDashDotDot
