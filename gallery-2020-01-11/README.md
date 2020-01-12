@@ -18,12 +18,18 @@ value='You are now in a GitHub web page view - Click this button to view this re
 ## [Albert Einstein 128 contours]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/albert-small-lines-256.csv )
 
 
-## [Skull 32 lines]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/skull-lines-128.csv)
+## [Skull 32 lines]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/skull-lines-32.csv)
+
+## [Skull 128 lines]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/skull-lines-128.csv)
+
+## [Skull 256 lines]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/skull-lines-256.csv)
 
 
 ## [Elefante]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/elefante-lines-128.csv)
 
-## [Helga1]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/helga1-lines-128.csv)
+## [Helga1 256 lines]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/helga1-lines-256.csv)
+
+## [Helga1 128 lines]( https://konturno.github.io/render-csv-file/v-2020-01-11/render-csv-file.html#camx=-90&camy=100&camz=50&tarx=0&tary=0&tarz=0&url=https://rawcdn.githack.com/konturno/konturno.github.io/master/csv-file-samples/helga1-lines-128.csv)
 
 <!--
 <iframe src=https://jaanga.github.io/cookbook/examples/xxxxxx/xxxxxx.html width=100% height=500px >Iframes are not viewable in GitHub source code view</iframe>
