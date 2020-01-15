@@ -9,7 +9,7 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 _"Konturno" means "contour" in Esperanto._
 
-Our motto is "drop us a line"
+Our motto is "drop us a line."
 
 Open one of the links below. When the model appears and starts to rotate click the 'let's dance' button at top right.
 

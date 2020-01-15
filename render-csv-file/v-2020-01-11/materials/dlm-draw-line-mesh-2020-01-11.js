@@ -42,7 +42,7 @@ DLM.getMenu = function () {
 	</p>
 
 	<p>
-		Select ground color: <input type="color" value="#ff00ff" id=DLMselMaterialColor >
+		Select mesh color: <input type="color" value="#ff00ff" id=DLMselMaterialColor >
 	</p>
 	<p>
 		<button onclick=DLM.applyColorSelected() >apply selected color</button>
