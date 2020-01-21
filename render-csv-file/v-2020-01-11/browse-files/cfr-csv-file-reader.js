@@ -1,5 +1,5 @@
 // copyright 2020 Theo Armour. MIT license.
-// See pushme-pullyou.github.io/templates-013/threejs-hamburger/
+// See pushme-pullyou.github.io/templates-01/threejs-hamburger/
 // 2020-01-03
 /* global THREE */
 // jshint esversion: 6
@@ -45,7 +45,7 @@ CFR.getMenu = function () {
 CFR.openFile = function ( files ) {
 
 	url = "";
-	
+
 	const reader = new FileReader();
 
 	reader.onprogress = ( event ) => {
