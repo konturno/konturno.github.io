@@ -9,6 +9,8 @@ value='You are now in a GitHub web page view - Click this button to view this re
 
 _"Konturno" means "contour" in Esperanto._
 
+
+
 Our motto is "drop us a line."
 
 Open one of the links below. When the model appears and starts to rotate click the 'let's dance' button at top right.
@@ -44,11 +46,6 @@ Click the '⌂' button at lower right to come back here.
 ***
 
 <br>
-
-<iframe src=https://konturno.github.io/render-csv-file/ width=100% height=500px >Iframes are not viewable in GitHub source code view</iframe>
-_Venus de Milo_
-
-### Full Screen: [render csv file]( https://konturno.github.io/render-csv-file/ )
 
 
 
