@@ -61,6 +61,10 @@
 				<a href="" id=aTitle title="Click this menu title to reset the model"></a>
 			</h1>
 
+			<p>
+				<button onclick=calculateLength() >Calculate length of the string</button>
+			</p>
+
 			<div id=divMessage></div>
 
 			<p
@@ -79,6 +83,7 @@
 
 
 		const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/portrait_20May2020__polar.csv";
+		let values;
 
 		let renderer, camera, controls, scene;
 		let geometry, material, mesh, axesHelper;
@@ -168,7 +173,7 @@
 			// Fastest line in Three.js is from a single array of numbers that is a repeated sequence of XYZ values
 			// So let's hack the CSV data
 
-			const values = csv.split( /\r\n|\n/ ) // make array of lines of text
+			values = csv.split( /\r\n|\n/ ) // make array of lines of text
 				.slice( 1, -1 ) // drop first and last lines 'cause they cause errors'
 				.map( line => line.split( "," ) // make each line an array of strings
 					.slice( 1, 4 ) ) // extract 2nd, 3rd, 4th values - first XYZ
@@ -189,6 +194,12 @@
 
 		}
 
+		function calculateLength() {
+
+
+			alert( "Coming soon!" )
+
+		}
 
 ////// Typical stuff Theo drops in his scripts - can all be cut out with no harm
 
@@ -224,7 +235,7 @@
 
 		}
 
-		
+
 
 		function onWindowResize() {
 

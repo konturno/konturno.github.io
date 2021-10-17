@@ -16,7 +16,7 @@ Imagine a 3D sculpture and a ball of string. Take the string and wrap it round a
 
 How long is the piece of string?
 
-
+We will find out tomorrow. In the meantime you can see the string above.
 
 ## To Do / Wish List
 
