@@ -1,14 +1,21 @@
-# [![](https://pushme-pullyou.github.io/tootoo-2021/lib/assets/icons/mark-github.svg )](https://github.com/konturno/konturno.github.io/ "Source code on GitHub" ) [Konturno 2021]( https://kionturno.github.io/ "Home page" )  / [Spiralito Read Me]( https://konturno.github.io/#sandbox/spiralito/r-2021-10-17/spiralito/README.md)
+# [![](https://pushme-pullyou.github.io/tootoo-2021/lib/assets/icons/mark-github.svg )](https://github.com/konturno/konturno.github.io/ "Source code on GitHub" ) [Konturno 2021]( https://kionturno.github.io/ "Home page" )  / [Spiralito Read Me]( https://konturno.github.io/#sandbox/spiralito/README.md)
 
 
 <!--@@@
-<div class=iframe-resize ><iframe src=https://konturno.github.io/sandbox/spiralito/r-2021-10-17/ height=100% width=100% ></iframe></div>
+<div class=iframe-resize ><iframe src=https://konturno.github.io/sandbox/spiralito/ height=100% width=100% ></iframe></div>
 _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 @@@-->
 
-## Full Screen: [Spiralito]( https://konturno.github.io/sandbox/spiralito/r-2021-10-17/ )
+## Full Screen: [Spiralito]( https://konturno.github.io/sandbox/spiralito/ )
 
 ## Concept
+
+How long is a "piece of string"?
+
+Imagine a 3D sculpture and a ball of string. Take the string and wrap it round and round the sculpture. As you are wrapping the string you need to hold the string in place. So you stick a pin through the string and into the sculpture. Now, let us say you have just 100,000 pins.
+
+How long is the piece of string?
+
 
 
 ## To Do / Wish List
@@ -19,6 +26,14 @@ _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 
 ## Links of Interest
 
+Inspration
+
+* https://github.com/dashdotdotdashdotdot
+* https://rart.shinyapps.io/How_the_Parametric_Function_Works/
+* https://github.com/dashdotdotdashdotdot/Lines
+
+Data
+* https://github.com/dashdotdotdashdotdot/Lines/blob/master/portrait_20May2020__polar.csv
 
 ## Change Log
 
