@@ -203,9 +203,9 @@
 
 			//drawLine();
 
-			//drawLineRandomColors()
+			drawLineRandomColors()
 
-			redrawInterval();
+			//redrawInterval();
 
 			//drawSprites();
 
@@ -298,8 +298,33 @@
 
 			scene.add( group )
 
+		}
+
+
+		function drawPoints() {
+
+			const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
+
+			const sprite = new THREE.TextureLoader().load( 'disc.png' );
+
+			vertices = []
+
+			for ( let i = 3; i < values.length; i += 3 ) {
+
+				vertices.push( v( values[ i ], values[ i + 1 ], values[ i + 2 ] ) );
+
+			}
+
+			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+
+			material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: true, map: sprite, alphaTest: 0.5, transparent: true } );
+			material.color.setHSL( 1.0, 0.3, 0.7 );
+
+			const particles = new THREE.Points( geometry, material );
+			scene.add( particles );
 
 		}
+
 
 
 		function calculateLength() {
