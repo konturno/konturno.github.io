@@ -69,6 +69,9 @@
 			<p>
 				<button onclick=drawLineRandom()>random color line</button>
 				<input type=color onchange=drawLine(this.value)>
+
+				<button onclick=drawLineRandomColors()>drawLineRandomColors</button>
+
 			</p>
 			<p>
 				<button onclick=redrawInterval()>redraw every second</button>
@@ -200,10 +203,41 @@
 
 			//drawLine();
 
-			redrawInterval();
+			drawLineRandomColors()
+
+			//redrawInterval();
+
+
 
 		}
 
+		function drawLineRandomColors() {
+
+			const geometry = new THREE.BufferGeometry();
+			geometry.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+
+			values = [];
+			color = 0;
+			for ( var i = 0; i < vertices.length;  i++ ) {
+				color += 0.000005
+				values[ i ] = color;
+			}
+
+
+			colors = new Float32Array( values );
+
+			geometry.setAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
+
+			var material = new THREE.LineBasicMaterial( {
+				color: 0xffffff,
+				vertexColors: THREE.VertexColors
+			} );
+
+			scene.remove( line );
+			line = new THREE.Line( geometry, material );
+			scene.add( line );
+
+		}
 
 
 		function drawLine( color = 0x0000ff ) {
@@ -219,7 +253,7 @@
 
 		}
 
-		color = 10_000_000
+		color = 10_000_000;
 
 		function drawLineRandom() {
 
@@ -233,15 +267,14 @@
 
 		function redrawInterval() {
 
-			setInterval( drawLineRandom, 1000 )
+			//interval = setInterval( drawLineRandom, 1000 );
+
+			interval = setInterval( drawLineRandomColors, 1000 );
+
+
 
 		}
 
-		function redrawInterval() {
-
-			setInterval( drawLineRandom, 1000 )
-
-		}
 
 
 		function calculateLength() {
