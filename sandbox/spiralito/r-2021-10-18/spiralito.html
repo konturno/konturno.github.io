@@ -203,11 +203,13 @@
 
 			//drawLine();
 
-			drawLineRandomColors()
+			//drawLineRandomColors()
 
 			//redrawInterval();
 
 			//drawSprites();
+
+			drawPoints();
 
 		}
 
@@ -305,20 +307,26 @@
 
 			const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
 
-			const sprite = new THREE.TextureLoader().load( 'disc.png' );
+			const sprite = new THREE.TextureLoader().load( '../../../assets/circle.png' );
 
-			vertices = []
+			vertices = [];
+			colors = [];
 
 			for ( let i = 3; i < values.length; i += 3 ) {
 
 				vertices.push( v( values[ i ], values[ i + 1 ], values[ i + 2 ] ) );
+				colors.push( [ 0.3, 0.9, 0.7 ] );
+
 
 			}
 
-			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+			const geometry = new THREE.BufferGeometry();
+			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
+			geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( values, 3 ) );
 
-			material = new THREE.PointsMaterial( { size: 35, sizeAttenuation: true, map: sprite, alphaTest: 0.5, transparent: true } );
-			material.color.setHSL( 1.0, 0.3, 0.7 );
+			material = new THREE.PointsMaterial( { 	color: 0xffffff, vertexColors: THREE.VertexColors, size: 0.02, sizeAttenuation: true, map: sprite, opacity: 0.5, transparent: true } );
+			//material.color.setHSL( 0.5, 0.9, 0.7 );
+
 
 			const particles = new THREE.Points( geometry, material );
 			scene.add( particles );
