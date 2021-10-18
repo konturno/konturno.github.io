@@ -64,8 +64,14 @@
 			<p>
 				<button onclick=drawLine()>blue line</button>
 				<button onclick=drawLine(0xff0000)>red line</button>
-				<button onclick=drawLineRandom()>random line</button>
 
+			</p>
+			<p>
+				<button onclick=drawLineRandom()>random color line</button>
+				<input type=color onchange=drawLine(this.value)>
+			</p>
+			<p>
+				<button onclick=redrawInterval()>redraw every second</button>
 			</p>
 
 			<p>
@@ -192,9 +198,13 @@
 			vertices = new Float32Array( values );
 			//console.log( "values", values );
 
-			drawLine();
+			//drawLine();
+
+			redrawInterval();
 
 		}
+
+
 
 		function drawLine( color = 0x0000ff ) {
 
@@ -206,15 +216,34 @@
 			scene.remove( line );
 			line = new THREE.Line( geometry, material );
 			scene.add( line );
+
 		}
 
+		color = 10_000_000
 
 		function drawLineRandom() {
 
-			drawLine( Math.random() * 0xffffff );
+			//drawLine( Math.random() * 16000000 );
+
+			drawLine( color );
+
+			color += 2000;
 
 		}
-		
+
+		function redrawInterval() {
+
+			setInterval( drawLineRandom, 1000 )
+
+		}
+
+		function redrawInterval() {
+
+			setInterval( drawLineRandom, 1000 )
+
+		}
+
+
 		function calculateLength() {
 
 			const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
