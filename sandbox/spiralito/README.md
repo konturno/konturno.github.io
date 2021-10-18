@@ -6,7 +6,10 @@
 _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 @@@-->
 
-## Full Screen: [Spiralito]( https://konturno.github.io/sandbox/spiralito/ )
+## Full Screen: [Spiralito 2021-10-18]( https://konturno.github.io/sandbox/spiralito/r-2021-10-18/spiralito.html )
+
+
+* [Spiralito 2021-10-17]( https://konturno.github.io/sandbox/spiralito/r-2021-10-17/spiralito.html )
 
 ## Concept
 
