@@ -203,41 +203,15 @@
 
 			//drawLine();
 
-			drawLineRandomColors()
+			//drawLineRandomColors()
 
-			//redrawInterval();
+			redrawInterval();
 
-
-
-		}
-
-		function drawLineRandomColors() {
-
-			const geometry = new THREE.BufferGeometry();
-			geometry.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
-
-			values = [];
-			color = 0;
-			for ( var i = 0; i < vertices.length;  i++ ) {
-				color += 0.000005
-				values[ i ] = color;
-			}
-
-
-			colors = new Float32Array( values );
-
-			geometry.setAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
-
-			var material = new THREE.LineBasicMaterial( {
-				color: 0xffffff,
-				vertexColors: THREE.VertexColors
-			} );
-
-			scene.remove( line );
-			line = new THREE.Line( geometry, material );
-			scene.add( line );
+			//drawSprites();
 
 		}
+
+
 
 
 		function drawLine( color = 0x0000ff ) {
@@ -253,7 +227,7 @@
 
 		}
 
-		color = 10_000_000;
+		let color = 10_000_000;
 
 		function drawLineRandom() {
 
@@ -265,16 +239,67 @@
 
 		}
 
+
+		function drawLineRandomColors() {
+
+			const geometry = new THREE.BufferGeometry();
+			geometry.setAttribute( 'position', new THREE.BufferAttribute( vertices, 3 ) );
+
+			values = [];
+			let color = 0;
+			for ( let i = 0; i < vertices.length; i++ ) {
+				color += 0.000005
+				values[ i ] = color;
+			}
+
+			const colors = new Float32Array( values );
+			geometry.setAttribute( 'color', new THREE.BufferAttribute( colors, 3 ) );
+
+			const material = new THREE.LineBasicMaterial( {
+				color: 0xffffff,
+				vertexColors: THREE.VertexColors
+			} );
+
+			scene.remove( line );
+			line = new THREE.Line( geometry, material );
+			scene.add( line );
+
+		}
+
+
 		function redrawInterval() {
 
 			//interval = setInterval( drawLineRandom, 1000 );
 
 			interval = setInterval( drawLineRandomColors, 1000 );
 
+		}
+
+
+
+		function drawSprites() {
+
+			const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
+
+			const spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000, opacity: 0.2, transparent: true } );
+
+			group = new THREE.Group();
+
+			for ( let i = 3; i < values.length; i += 3 ) {
+
+				const vertex = v( values[ i ], values[ i + 1 ], values[ i + 2 ] );
+
+				const sprite = new THREE.Sprite( spriteMaterial );
+				sprite.scale.set( 0.005, 0.005, 0.005 )
+				sprite.position.copy( vertex )
+				group.add( sprite );
+
+			}
+
+			scene.add( group )
 
 
 		}
-
 
 
 		function calculateLength() {
