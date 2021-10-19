@@ -104,7 +104,9 @@
 		// https://github.com/dashdotdotdashdotdot/Lines
 
 
-		const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/portrait_20May2020__polar.csv";
+	//const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/portrait_20May2020__polar.csv";
+	const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/relief.csv";
+
 		let values;
 		let obj;
 		let intervalID;
@@ -125,7 +127,7 @@
 
 			const fov = 40;
 			const aspect = window.innerWidth / window.innerHeight;
-			const near = 0.1;
+			const near = 0.01;
 			const far = 1000;
 			camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
 			camera.position.set( -2, -1, 2 );
@@ -217,7 +219,7 @@
 				.split( "," ) // cut up the string into an array of strings
 				.map( value => + value ); // convert strings to numbers
 
-			//drawLine();
+			drawLine();
 
 			//drawLineRandomColors()
 
@@ -225,7 +227,7 @@
 
 			//drawSprites();
 
-			drawPoints();
+			//drawPoints();
 
 			animate();
 
@@ -235,8 +237,7 @@
 
 		function drawLine( color = 0x0000ff ) {
 
-			const geometry = new THREE.BufferGeometry();
-			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
+			const geometry = getGeometry();
 
 			const material = new THREE.LineBasicMaterial( { color: color } );
 
@@ -246,6 +247,17 @@
 
 		}
 
+
+		function getGeometry() {
+
+			const geometry = new THREE.BufferGeometry();
+			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
+			geometry.computeBoundingSphere();
+			cen = geometry.boundingSphere.center
+			geometry.translate( -cen.x, -cen.y, -cen.z );
+
+			return geometry;
+		}
 
 
 		function drawLineRandom() {
@@ -261,8 +273,7 @@
 
 		function drawLineGradient() {
 
-			const geometry = new THREE.BufferGeometry();
-			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
+			const geometry = getGeometry();
 
 			// const colors = [];
 			// let color = 0;
@@ -311,7 +322,7 @@
 				const vertex = v( values[ i ], values[ i + 1 ], values[ i + 2 ] );
 
 				const sprite = new THREE.Sprite( spriteMaterial );
-				sprite.scale.set( 0.005, 0.005, 0.005 )
+				sprite.scale.set( 0.005, 0.005, 0.005 );
 				sprite.position.copy( vertex )
 				obj.add( sprite );
 
@@ -327,13 +338,12 @@
 
 			const sprite = new THREE.TextureLoader().load( '../../../assets/circle.png' );
 
-			const geometry = new THREE.BufferGeometry();
-			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
+			const geometry = getGeometry();
+
 			geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( values, 3 ) );
 
-			material = new THREE.PointsMaterial( { color: 0xffffff, vertexColors: THREE.VertexColors, size: 0.02, sizeAttenuation: true, map: sprite, alphaTest: 0.5, transparent: true } );
+			const material = new THREE.PointsMaterial( { color: 0xffffff, vertexColors: THREE.VertexColors, size: 0.02, sizeAttenuation: true, map: sprite, alphaTest: 0.5, transparent: true } );
 			//material.color.setHSL( 0.5, 0.9, 0.7 );
-
 
 			scene.remove( obj );
 			obj = new THREE.Points( geometry, material );
@@ -348,7 +358,6 @@
 			const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
 
 			let vertexPrevious = v( values[ 0 ], values[ 1 ], values[ 2 ] );
-
 			let distance = 0;
 
 			for ( let i = 3; i < values.length; i += 3 ) {

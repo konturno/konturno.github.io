@@ -6,22 +6,23 @@
 _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 @@@-->
 
-## Full Screen:  [Spiralito 2021-10-19]( https://konturno.github.io/sandbox/spiralito/r-2021-10-18/spiralito.html ) ~ All buttons work
+## Full Screen:  [Spiralito 2021-10-19]( https://konturno.github.io/sandbox/spiralito/r-2021-10-19/spiralito.html ) ~ All buttons work
 
-* [Spiralito 2021-10-18]( https://konturno.github.io/sandbox/spiralito/r-2021-10-18/spiralito.html ) ~ Draws points but bottons don't work
+* [Spiralito 2021-10-18]( https://konturno.github.io/sandbox/spiralito/r-2021-10-18/spiralito.html ) ~ Draws points; display a number of buttons to draw lines with varying colors;  but buttons don't work; adds simple camera movement
 
 
-* [Spiralito 2021-10-17]( https://konturno.github.io/sandbox/spiralito/r-2021-10-17/spiralito.html ) ~ First pass
+* [Spiralito 2021-10-17]( https://konturno.github.io/sandbox/spiralito/r-2021-10-17/spiralito.html ) ~ First pass ~ Read CSV data file from "-..-.." repo; draws a single line connecting the points.
+
+* [basic-threejs-2021-08-13.html]) https://github.com/konturno/konturno.github.io/blob/master/templates/basic-threejs-2021-08-13.html ) ~ Template used to kick off the broject
 
 ## Concept
 
-How long is a "piece of string"?
+Work-in-progress
 
-Imagine a 3D sculpture and a ball of string. Take the string and wrap it round and round the sculpture. As you are wrapping the string you need to hold the string in place. So you stick a pin through the string and into the sculpture. Now, let us say you have just 100,000 pins.
+* Read CSV data file from "-..-.." repo
+* Translate 
+* Draws a single line connecting the points
 
-How long is the piece of string?
-
-We will find out tomorrow. In the meantime you can see the string above.
 
 ## To Do / Wish List
 
@@ -42,10 +43,30 @@ Data
 
 ## Change Log
 
+### 2021-10-19
+
+* Much refactoring. All buttons routines play nicely with each other
+
+
+### 2021-10-18
+
+* Add a number of line drawing routines.
+* Add color gradient capability
+* Point routine breaks all the line routines.
+* Add simple camera moving routine
+
 
 ### 2021-10-17
 
 * First commit
+
+How long is a "piece of string"?
+
+Imagine a 3D sculpture and a ball of string. Take the string and wrap it round and round the sculpture. As you are wrapping the string you need to hold the string in place. So you stick a pin through the string and into the sculpture. Now, let us say you have just 100,000 pins.
+
+How long is the piece of string?
+
+We will find out tomorrow. In the meantime you can see the string above.
 
 
 ***
