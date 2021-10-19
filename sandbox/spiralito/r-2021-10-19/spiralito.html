@@ -62,6 +62,12 @@
 			</h1>
 
 			<p>
+				<button onclick=requestFile("portrait_20May2020__polar") >portrait_20May2020__polar</button>
+
+				<button onclick=requestFile("relief")>relief</button>
+			</p>
+
+			<p>
 				<button onclick=drawLine()>blue line</button>
 				<button onclick=drawLine(0xff0000)>red line</button>
 				<input type=color onchange=drawLine(this.value)>
@@ -74,7 +80,7 @@
 				<button onclick=drawLineGradient()>gradient line</button>
 			</p>
 			<p>
-				<button onclick=redrawInterval()>redraw every second</button>
+				<button  >redraw every second</button>
 			</p>
 <p>
 	<button onclick=drawPoints()>draw points</button>
@@ -84,6 +90,10 @@
 			</p>
 
 			<div id=divMessage></div>
+
+			<p>
+				<input type=checkbox onclick=timeFactor=this.checked?0.001:0; checked> Toggle rotation
+			</p>
 
 			<p>
 				spacerbar|click: toggle rotation
@@ -105,7 +115,7 @@
 
 
 	//const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/portrait_20May2020__polar.csv";
-	const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/relief.csv";
+	//const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/relief.csv";
 
 		let values;
 		let obj;
@@ -158,8 +168,8 @@
 
 			window.addEventListener( 'resize', onWindowResize, false );
 			window.addEventListener( 'orientationchange', onWindowResize, false );
-			window.addEventListener( 'keyup', function () { timeFactor = timeFactor === 0 ? 0.001 : 0; clearInterval( intervalID ); }, false );
-			renderer.domElement.addEventListener( 'click', function () { timeFactor = timeFactor === 0 ? 0.001 : 0; clearInterval( intervalID ); }, false );
+			window.addEventListener( 'keyup', function () { timeFactor = chkRotate.checked ? 0.001 : 0; clearInterval( intervalID ); }, false );
+			renderer.domElement.addEventListener( 'click', function () { timeFactor = chkRotate.checked ? 0.001 : 0; clearInterval( intervalID ); }, false );
 
 			//axesHelper = new THREE.AxesHelper( 50 );
 			//scene.add( axesHelper );
@@ -169,7 +179,7 @@
 			// mesh = new THREE.Mesh( geometry, material );
 			// scene.add( mesh );
 
-			requestFile( url, callback );
+			requestFile();
 
 			renderer.render( scene, camera );
 
@@ -177,13 +187,15 @@
 
 
 
-		function requestFile( url, callback ) {
+		function requestFile( file = "portrait_20May2020__polar", cb = callback) {
+
+			url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/" + file + ".csv";
 
 			const xhr = new XMLHttpRequest();
 			xhr.open( 'GET', url, true );
 			xhr.onerror = ( xhr ) => console.log( 'error:', xhr );
 			//xhr.onprogress = ( xhr ) => console.log( 'bytes loaded:', xhr.loaded );
-			xhr.onload = ( xhr ) => callback( xhr.target.response );
+			xhr.onload = ( xhr ) => cb( xhr.target.response );
 			xhr.send( null );
 
 		}

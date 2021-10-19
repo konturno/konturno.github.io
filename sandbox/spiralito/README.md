@@ -19,9 +19,10 @@ _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 
 Work-in-progress
 
-* Read CSV data file from "-..-.." repo
-* Translate 
+* Read CSV data files from "-..-.." repo
+* Translate
 * Draws a single line connecting the points
+* Once the file is loaded, the text is hacked into a suitable array of coordinate data and a single line is drawn.
 
 
 ## To Do / Wish List
@@ -57,6 +58,10 @@ Data
 
 
 ### 2021-10-17
+
+This script requests a CSV file from: https://github.com/dashdotdotdashdotdot
+
+Once the file is loaded, the text is hacked into a suitable array of coordinate data and a single line is drawn.
 
 * First commit
 
