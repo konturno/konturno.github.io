@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name=description content="Real-time 3D in your browser with menu hiding">
+	<meta name=keywords content="Three.js,WebGL,JavaScript,GitHub,FOSS,3D,STEM">
+	<meta name="date" content="2021-10-19">
+	<title>Spiralito 2021-10-19</title>
+	<style>
+		/* Copyright 2021 Theo Armour. MIT License */
+
+		body {
+			font: 100% monospace;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		#main {
+			border: 1px solid red;
+			margin: 0 auto 0 20rem;
+			max-width: 40rem;
+
+		}
+
+		.nav {
+			background: white;
+			border-radius: 10px;
+			box-shadow: 0 0 50px -25px black;
+			color: gray;
+			margin: 1rem;
+			width: 16rem;
+			overflow: auto;
+			padding: 1rem;
+			position: absolute;
+			resize: both;
+		}
+
+		.full-width {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r133/build/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r133/examples/js/controls/OrbitControls.js"></script>
+
+
+	<nav id=navMenu class=nav>
+
+		<details open>
+
+			<summary>show&darr; || hide&uarr; </summary>
+
+			<h1>
+				<a href="https://github.com/konturno/konturno.github.io/tree/master/sandbox/spiralito" target="_blank"
+					title="source code on GitHub"><img
+						src=https://pushme-pullyou.github.io/tootoo-2021/lib/assets/icons/mark-github.svg></a>
+				<a href="" id=aTitle title="Click this menu title to reset the model"></a>
+			</h1>
+
+			<p>
+				<button onclick=drawLine()>blue line</button>
+				<button onclick=drawLine(0xff0000)>red line</button>
+				<input type=color onchange=drawLine(this.value)>
+
+			</p>
+
+			<p>
+				<button onclick=drawLineRandom()>random color line</button>
+
+				<button onclick=drawLineGradient()>gradient line</button>
+			</p>
+			<p>
+				<button onclick=redrawInterval()>redraw every second</button>
+			</p>
+<p>
+	<button onclick=drawPoints()>draw points</button>
+</p>
+			<p>
+				<button onclick=calculateLength()>Calculate length of the string</button>
+			</p>
+
+			<div id=divMessage></div>
+
+			<p>
+				spacerbar|click: toggle rotation
+			</p>
+
+			<p
+				title="View the number of objects that need rendering and the total number of triangles used to create the objects">
+				<button onclick="setStats()">View renderer statistics</button>
+			</p>
+
+		</details>
+
+	</nav>
+
+
+	<script>
+
+		// https://github.com/dashdotdotdashdotdot/Lines
+
+
+		const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/portrait_20May2020__polar.csv";
+		let values;
+		let obj;
+		let intervalID;
+		let color = 10_000_000;
+		let timeFactor = 0.001;
+
+		let renderer, camera, controls, scene;
+		let geometry, material, mesh, axesHelper;
+
+		init();
+
+
+		function init() {
+
+			//aTitle.innerHTML = document.title = location.href.split( "/" ).pop();
+
+			aTitle.innerHTML = document.title ? document.title : location.href.split( '/' ).pop().slice( 0, - 5 ).replace( /-/g, ' ' );
+
+			const fov = 40;
+			const aspect = window.innerWidth / window.innerHeight;
+			const near = 0.1;
+			const far = 1000;
+			camera = new THREE.PerspectiveCamera( fov, aspect, near, far );
+			camera.position.set( -2, -1, 2 );
+			//camera.up.set( 0, 0, 1 );
+
+			scene = new THREE.Scene();
+			scene.background = new THREE.Color( 0xcce0ff );
+			//scene.fog = new THREE.Fog( 0xcce0ff, 550, 800 );
+			scene.add( camera );
+
+			renderer = new THREE.WebGLRenderer( { antialias: true, alpha: false } );
+			//renderer.setPixelRatio( window.devicePixelRatio );
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			renderer.outputEncoding = THREE.sRGBEncoding;
+			renderer.shadowMap.enabled = true;
+			renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+			controls = new THREE.OrbitControls( camera, renderer.domElement );
+			//controls.autoRotate = true;
+			controls.autoRotateSpeed = 5;
+			controls.enableDamping = true;
+			controls.enablePan = true;
+			controls.dampingFactor = 0.08;
+			controls.minDistance = 1;
+			controls.maxDistance = 500;
+
+			window.addEventListener( 'resize', onWindowResize, false );
+			window.addEventListener( 'orientationchange', onWindowResize, false );
+			window.addEventListener( 'keyup', function () { timeFactor = timeFactor === 0 ? 0.001 : 0; clearInterval( intervalID ); }, false );
+			renderer.domElement.addEventListener( 'click', function () { timeFactor = timeFactor === 0 ? 0.001 : 0; clearInterval( intervalID ); }, false );
+
+			//axesHelper = new THREE.AxesHelper( 50 );
+			//scene.add( axesHelper );
+
+			// geometry = new THREE.BoxGeometry( 50, 50, 50 );
+			// material = new THREE.MeshNormalMaterial();
+			// mesh = new THREE.Mesh( geometry, material );
+			// scene.add( mesh );
+
+			requestFile( url, callback );
+
+			renderer.render( scene, camera );
+
+		}
+
+
+
+		function requestFile( url, callback ) {
+
+			const xhr = new XMLHttpRequest();
+			xhr.open( 'GET', url, true );
+			xhr.onerror = ( xhr ) => console.log( 'error:', xhr );
+			//xhr.onprogress = ( xhr ) => console.log( 'bytes loaded:', xhr.loaded );
+			xhr.onload = ( xhr ) => callback( xhr.target.response );
+			xhr.send( null );
+
+		}
+
+
+
+		function animate() {
+
+			requestAnimationFrame( animate );
+			renderer.render( scene, camera );
+
+			const time = Date.now() * timeFactor;
+
+			obj.rotation.x = time * 0.25;
+			obj.rotation.y = time * 0.5;
+
+			controls.update();
+
+		}
+
+
+
+		function callback( csv ) {
+
+			// Fastest line in Three.js is from a single array of numbers that is a repeated sequence of XYZ values
+			// So let's hack the CSV data
+
+			values = csv.split( /\r\n|\n/ ) // make array of lines of text
+				.slice( 1, -1 ) // drop first and last lines 'cause they cause errors'
+				.map( line => line.split( "," ) // make each line an array of strings
+					.slice( 1, 4 ) ) // extract 2nd, 3rd, 4th values - first XYZ
+				.join( "," ) // concat lines into single long string of values
+				.split( "," ) // cut up the string into an array of strings
+				.map( value => + value ); // convert strings to numbers
+
+			//drawLine();
+
+			//drawLineRandomColors()
+
+			//redrawInterval();
+
+			//drawSprites();
+
+			drawPoints();
+
+			animate();
+
+		}
+
+
+
+		function drawLine( color = 0x0000ff ) {
+
+			const geometry = new THREE.BufferGeometry();
+			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
+
+			const material = new THREE.LineBasicMaterial( { color: color } );
+
+			scene.remove( obj );
+			obj = new THREE.Line( geometry, material );
+			scene.add( obj );
+
+		}
+
+
+
+		function drawLineRandom() {
+
+			drawLine( Math.random() * 0xffffff );
+
+			// drawLine( color );
+			// color += 2000;
+
+		}
+
+
+
+		function drawLineGradient() {
+
+			const geometry = new THREE.BufferGeometry();
+			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
+
+			// const colors = [];
+			// let color = 0;
+			// for ( let i = 0; i < values.length; i++ ) {
+			// 	color += 0.000005
+			// 	colors[ i ] = color;
+			// }
+
+			geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( values, 3 ) );
+
+			const material = new THREE.LineBasicMaterial( {
+				color: 0xffffff,
+				vertexColors: THREE.VertexColors
+			} );
+
+			scene.remove( obj );
+			obj = new THREE.Line( geometry, material );
+			scene.add( obj );
+
+		}
+
+
+
+		function redrawInterval() {
+
+			//interval = setInterval( drawLineRandom, 1000 );
+
+			intervalID = setInterval( drawLineRandom, 1000 );
+
+		}
+
+
+
+		function drawSprites() { // too slow
+
+			const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
+
+			const spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000, opacity: 0.2, transparent: true } );
+
+			scene.remove( obj );
+
+			obj = new THREE.Group();
+
+			for ( let i = 3; i < values.length; i += 3 ) {
+
+				const vertex = v( values[ i ], values[ i + 1 ], values[ i + 2 ] );
+
+				const sprite = new THREE.Sprite( spriteMaterial );
+				sprite.scale.set( 0.005, 0.005, 0.005 )
+				sprite.position.copy( vertex )
+				obj.add( sprite );
+
+			}
+
+			scene.add( obj )
+
+		}
+
+
+
+		function drawPoints() {
+
+			const sprite = new THREE.TextureLoader().load( '../../../assets/circle.png' );
+
+			const geometry = new THREE.BufferGeometry();
+			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
+			geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( values, 3 ) );
+
+			material = new THREE.PointsMaterial( { color: 0xffffff, vertexColors: THREE.VertexColors, size: 0.02, sizeAttenuation: true, map: sprite, alphaTest: 0.5, transparent: true } );
+			//material.color.setHSL( 0.5, 0.9, 0.7 );
+
+
+			scene.remove( obj );
+			obj = new THREE.Points( geometry, material );
+			scene.add( obj );
+
+		}
+
+
+
+		function calculateLength() {
+
+			const v = ( x, y, z ) => new THREE.Vector3( x, y, z );
+
+			let vertexPrevious = v( values[ 0 ], values[ 1 ], values[ 2 ] );
+
+			let distance = 0;
+
+			for ( let i = 3; i < values.length; i += 3 ) {
+
+				const vertex = v( values[ i ], values[ i + 1 ], values[ i + 2 ] );
+
+				distance += vertex.distanceTo( vertexPrevious )
+
+				vertexPrevious = vertex;
+
+			}
+
+			console.log( "distance", distance );
+
+			divMessage.innerHTML = `Length of line: ${ distance.toLocaleString() }`;
+
+		}
+
+
+
+		////// Typical stuff Theo drops in his scripts - can all be cut out with no harm
+
+
+		function setStats() {
+
+			const script = document.head.appendChild( document.createElement( "script" ) );
+			script.onload = () => {
+
+				const stats = new Stats();
+				const sts = document.body.appendChild( stats.dom );
+				sts.style.left = "";
+				sts.style.right = "0px";
+				requestAnimationFrame( function loop() {
+
+					stats.update(); requestAnimationFrame( loop );
+
+				} );
+
+			};
+
+			script.src = "https://raw.githack.com/mrdoob/stats.js/master/build/stats.min.js";
+
+			const render = renderer.info.render;
+			if ( !window.divRendererInfo ) divRendererInfo = navMenu.appendChild( document.createElement( "div" ) );
+			divRendererInfo.innerHTML = `
+<div>
+	Renderer Info<br>
+	Calls: ${ render.calls }<br>
+	Lines: ${ render.lines }<br>
+	Triangles: ${ render.triangles.toLocaleString() }<br>
+</div>`;
+
+		}
+
+
+
+		function onWindowResize() {
+
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+
+			renderer.setSize( window.innerWidth, window.innerHeight );
+
+			//console.log( 'onWindowResize  window.innerWidth', window.innerWidth );
+
+		}
+
+	</script>
+
+</body>
+
+</html>
