@@ -6,7 +6,7 @@
 _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 @@@-->
 
-## Full Screen:  [Spiralito 2021-10-19]( https://konturno.github.io/sandbox/spiralito/r-2021-10-19/spiralito.html ) ~ All buttons work
+## Full Screen:  [Spiralito 2021-10-19A]( https://konturno.github.io/sandbox/spiralito/r-2021-10-19/spiralito.html ) ~ All buttons work
 
 * [Spiralito 2021-10-18]( https://konturno.github.io/sandbox/spiralito/r-2021-10-18/spiralito.html ) ~ Draws points; display a number of buttons to draw lines with varying colors;  but buttons don't work; adds simple camera movement
 
