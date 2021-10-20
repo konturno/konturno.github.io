@@ -62,7 +62,7 @@
 			</h1>
 
 			<p>
-				<button onclick=requestFile("portrait_20May2020__polar") >portrait_20May2020__polar</button>
+				<button onclick=requestFile("portrait_20May2020__polar")>portrait_20May2020__polar</button>
 
 				<button onclick=requestFile("relief")>relief</button>
 			</p>
@@ -80,11 +80,11 @@
 				<button onclick=drawLineGradient()>gradient line</button>
 			</p>
 			<p>
-				<button  >redraw every second</button>
+				<button>redraw every second</button>
 			</p>
-<p>
-	<button onclick=drawPoints()>draw points</button>
-</p>
+			<p>
+				<button onclick=drawPoints()>draw points</button>
+			</p>
 			<p>
 				<button onclick=calculateLength()>Calculate length of the string</button>
 			</p>
@@ -93,6 +93,10 @@
 
 			<p>
 				<input id=chkRotate type=checkbox onclick=timeFactor=this.checked?0.001:0; checked> Toggle rotation
+			</p>
+
+			<p>
+				<input id=chkNew type=checkbox onclick=timeFactor=this.checked?0.001:0; > multiple models
 			</p>
 
 			<p>
@@ -114,8 +118,8 @@
 		// https://github.com/dashdotdotdashdotdot/Lines
 
 
-	//const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/portrait_20May2020__polar.csv";
-	//const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/relief.csv";
+		//const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/portrait_20May2020__polar.csv";
+		//const url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/relief.csv";
 
 		let values;
 		let obj;
@@ -168,8 +172,8 @@
 
 			window.addEventListener( 'resize', onWindowResize, false );
 			window.addEventListener( 'orientationchange', onWindowResize, false );
-			window.addEventListener( 'keyup', function () { timeFactor = chkRotate.checked ? 0.001 : 0; clearInterval( intervalID ); }, false );
-			renderer.domElement.addEventListener( 'click', function () { timeFactor = chkRotate.checked ? 0.001 : 0; clearInterval( intervalID ); }, false );
+			window.addEventListener( 'keyup', function () { chkRotate.click(); clearInterval( intervalID ); }, false );
+			renderer.domElement.addEventListener( 'click', function () { chkRotate.click(); clearInterval( intervalID ); }, false );
 
 			//axesHelper = new THREE.AxesHelper( 50 );
 			//scene.add( axesHelper );
@@ -187,7 +191,7 @@
 
 
 
-		function requestFile( file = "portrait_20May2020__polar", cb = callback) {
+		function requestFile( file = "portrait_20May2020__polar", cb = callback ) {
 
 			url = "https://raw.githubusercontent.com/dashdotdotdashdotdot/Lines/master/" + file + ".csv";
 
@@ -253,7 +257,8 @@
 
 			const material = new THREE.LineBasicMaterial( { color: color } );
 
-			scene.remove( obj );
+			if ( chkNew.checked === false ) { scene.remove( obj ); }
+
 			obj = new THREE.Line( geometry, material );
 			scene.add( obj );
 
@@ -269,6 +274,7 @@
 			geometry.translate( -cen.x, -cen.y, -cen.z );
 
 			return geometry;
+
 		}
 
 
@@ -301,7 +307,7 @@
 				vertexColors: THREE.VertexColors
 			} );
 
-			scene.remove( obj );
+			if ( chkNew.checked === false ) { scene.remove( obj ); }
 			obj = new THREE.Line( geometry, material );
 			scene.add( obj );
 
@@ -325,7 +331,7 @@
 
 			const spriteMaterial = new THREE.SpriteMaterial( { color: 0xff0000, opacity: 0.2, transparent: true } );
 
-			scene.remove( obj );
+			if ( chkNew.checked === false ) { scene.remove( obj ); }
 
 			obj = new THREE.Group();
 
@@ -357,7 +363,7 @@
 			const material = new THREE.PointsMaterial( { color: 0xffffff, vertexColors: THREE.VertexColors, size: 0.02, sizeAttenuation: true, map: sprite, alphaTest: 0.5, transparent: true } );
 			//material.color.setHSL( 0.5, 0.9, 0.7 );
 
-			scene.remove( obj );
+			if ( chkNew.checked === false ) { scene.remove( obj ); }
 			obj = new THREE.Points( geometry, material );
 			scene.add( obj );
 
