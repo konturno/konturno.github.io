@@ -44,13 +44,14 @@
 </head>
 
 <body>
+
 	<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r133/build/three.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r133/examples/js/controls/OrbitControls.js"></script>
 
 
-	<script src = "https://cdn.jsdelivr.net/npm/omggif@1.0.10/omggif.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/omggif@1.0.10/omggif.min.js"></script>
 
-	<script src="../../../lib/ggf-generate-gif/10/ggf-generate-gif.js"></script>
+
 
 
 	<nav id=navMenu class=nav>
@@ -101,12 +102,14 @@
 			</p>
 
 			<p>
-				<input id=chkNew type=checkbox onclick=timeFactor=this.checked?0.001:0; > multiple models
+				<input id=chkNew type=checkbox onclick=timeFactor=this.checked?0.001:0;> multiple models
 			</p>
 
 			<p>
 				spacerbar|click: toggle rotation
 			</p>
+
+			<div id=GGFdet></div>
 
 			<p
 				title="View the number of objects that need rendering and the total number of triangles used to create the objects">
@@ -117,6 +120,7 @@
 
 	</nav>
 
+	<script src="../../../lib/ggf-generate-gif/r-2021-10-20/ggf-generate-gif.js"></script>
 
 	<script>
 
@@ -191,6 +195,8 @@
 			requestFile();
 
 			renderer.render( scene, camera );
+
+			GGF.init();
 
 		}
 
