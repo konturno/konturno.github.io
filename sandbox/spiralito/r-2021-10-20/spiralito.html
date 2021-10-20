@@ -86,7 +86,7 @@
 				<button onclick=drawLineGradient()>gradient line</button>
 			</p>
 			<p>
-				<button>redraw every second</button>
+				<button onclick=redrawInterval(); >redraw every second</button>
 			</p>
 			<p>
 				<button onclick=drawPoints()>draw points</button>
@@ -98,11 +98,16 @@
 			<div id=divMessage></div>
 
 			<p>
-				<input id=chkRotate type=checkbox onclick=timeFactor=this.checked?0.001:0; checked> Toggle rotation
+				<label>
+					<input id=chkRotate type=checkbox onclick=timeFactor=this.checked?0.001:0; checked> Toggle rotation
+				</label>
+
 			</p>
 
 			<p>
-				<input id=chkNew type=checkbox onclick=timeFactor=this.checked?0.001:0;> multiple models
+				<label>
+					<input id=chkNew type=checkbox onclick=timeFactor=this.checked?0.001:0;> multiple models
+				</label>
 			</p>
 
 			<p>
@@ -181,8 +186,8 @@
 
 			window.addEventListener( 'resize', onWindowResize, false );
 			window.addEventListener( 'orientationchange', onWindowResize, false );
-			window.addEventListener( 'keyup', function () { chkRotate.click(); clearInterval( intervalID ); }, false );
-			renderer.domElement.addEventListener( 'click', function () { chkRotate.click(); clearInterval( intervalID ); }, false );
+			window.addEventListener( 'keyup', function () { timeFactor=0; chkRotate.checked=false; clearInterval( intervalID ); }, false );
+			renderer.domElement.addEventListener( 'click', function () { timeFactor=0; clearInterval( intervalID ); }, false );
 
 			//axesHelper = new THREE.AxesHelper( 50 );
 			//scene.add( axesHelper );

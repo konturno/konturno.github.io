@@ -6,7 +6,11 @@
 _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 @@@-->
 
-## Full Screen: [Spiralito 2021-10-20]( https://konturno.github.io/sandbox/spiralito/r-2021-10-20/spiralito.html ) ~ add Generate GIF
+## Full Screen: [Spiralito 2021-10-20]( https://konturno.github.io/sandbox/spiralito/r-2021-10-20/spiralito.html )
+
+* add Generate GIF << Wow!
+* Update camera motion
+* Fix "redraw every second"
 
 * [Spiralito 2021-10-19A]( https://konturno.github.io/sandbox/spiralito/r-2021-10-19/spiralito.html ) ~ All buttons work
 
