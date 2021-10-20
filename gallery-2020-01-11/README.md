@@ -57,6 +57,15 @@ Click the '⌂' button at lower right to come back here.
 <details open >
 <summary>Concept</summary>
 
+### 2021-10-19
+
+See new effort ["Spirilito"]( https://konturno.github.io/sandbox/spiralito/ ) ~ this exact link always goes to latest release
+
+Read Me: https://konturno.github.io/sandbox/spiralito/readme.html#README.md
+
+
+
+
 ### 2020-01-12
 
 This project started in November 2019 at the behest of my then new friend DougD - AKA DashDotDotDashDotDot.
