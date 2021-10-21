@@ -12,6 +12,12 @@ _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 * Update camera motion
 * Fix "redraw every second"
 
+![]( https://konturno.github.io/images/2021-10-20-model.gif)
+
+_Animated GIF_
+
+***
+
 * [Spiralito 2021-10-19A]( https://konturno.github.io/sandbox/spiralito/r-2021-10-19/spiralito.html ) ~ All buttons work
 
 * [Spiralito 2021-10-18]( https://konturno.github.io/sandbox/spiralito/r-2021-10-18/spiralito.html ) ~ Draws points; display a number of buttons to draw lines with varying colors;  but buttons don't work; adds simple camera movement
@@ -19,7 +25,7 @@ _"Spiralito" in a resizable window. One finger to rotate. Two to zoom._
 
 * [Spiralito 2021-10-17]( https://konturno.github.io/sandbox/spiralito/r-2021-10-17/spiralito.html ) ~ First pass ~ Read CSV data file from "-..-.." repo; draws a single line connecting the points.
 
-* [basic-threejs-2021-08-13.html]) https://github.com/konturno/konturno.github.io/blob/master/templates/basic-threejs-2021-08-13.html ) ~ Template used to kick off the broject
+* [basic-threejs-2021-08-13.html]( https://github.com/konturno/konturno.github.io/blob/master/templates/basic-threejs-2021-08-13.html ) ~ Template used to kick off the broject
 
 ## Concept
 
