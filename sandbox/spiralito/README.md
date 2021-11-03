@@ -39,6 +39,10 @@ Work-in-progress
 
 ## To Do / Wish List
 
+* Button to set background to white, gradient, color
+* Instructions of saving stil image
+* Toggle UI
+
 
 ## Issues
 
