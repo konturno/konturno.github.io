@@ -143,11 +143,9 @@
 
 
 
-
-
 		function addLine() { // THRR-caster only
 
-			values = [];
+			const values = [];
 
 			for ( let i = 0; i < 9999; i++ ) {
 
@@ -166,7 +164,6 @@
 			line = new THREE.Line( geometry, material );
 			line.scale.set( 100, 100, 100 );
 			line.position.set( -50, -50, -50 );
-
 
 			scene.add( line );
 
