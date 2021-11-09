@@ -153,24 +153,27 @@
 		function addLine() { // THRR-caster only
 
 			const values = [];
+			const colors = [];
 
 			for ( let i = 0; i < 9999; i++ ) {
-
-				values.push( Math.random() );
+				num = Math.random()
+				values.push( num - 0.5 );
+				colors.push( num );
 
 			}
 
 			const geometry = new THREE.BufferGeometry();
 			geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( values, 3 ) );
-			geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( values, 3 ) );
+			geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
 
 			const material = new THREE.LineBasicMaterial( { color: 0xffffff, vertexColors: THREE.VertexColors } );
 
-			scene.remove( line );
+			//scene.remove( line );
 
 			line = new THREE.Line( geometry, material );
+			line.rotation.set( 6 * Math.random(), 6 * Math.random(), 7 * Math.random() );
 			line.scale.set( 100, 100, 100 );
-			line.position.set( -50, -50, -50 );
+			//line.position.set( -50, -50, -50 );
 
 			scene.add( line );
 			GGF.init( line );
