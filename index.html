@@ -45,6 +45,10 @@
 	<script>
 
 		const COR = {
+			// Used by GRV
+			user: "konturno",
+			repo: "konturno.github.io",
+			branch: "master",
 
 			// Used by MNU ~ mnu-menu.js
 			description: document.head.querySelector( "[ name=description ]" ).content,
@@ -53,20 +57,16 @@
 			iconInfo: `<img class=infoImg src="https://pushme-pullyou.github.io/tootoo-2022/assets/icons/noun_Information_585560.svg">`,
 			iconRepo: "❦",
 			title: document.title ? document.title : location.href.split( "/" ).pop().slice( 0, - 5 ).replace( /-/g, " " ),
-			urlSource: "https://github.com/pushme-pullyou/tootoo-2022/",
+			urlSource: "https://github.com/konturno/konturno.github.io/", ////////////
 			version: document.head.querySelector( "[ name=date ]" ).content,
 
-			// Used by GRV
-			user: "konturno",
-			repo: "konturno.github.io",
-			branch: "master",
 
 			// Used by FRX
 			pathContent: "https://konturno.github.io/",
 			//pathContent: "./",
 
-			// pathTooToo: "https://pushme-pullyou.github.io/tootoo-2022/",
-			pathTooToo: "./",
+			pathTooToo: "https://pushme-pullyou.github.io/tootoo-2022/",
+			//pathTooToo: "./",
 			defaultFile: "README.md",
 
 			filesAll: true,
