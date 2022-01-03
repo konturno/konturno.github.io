@@ -1,11 +1,5 @@
-<span style=display:none; >[You are now in a GitHub source code view - click this link to view Read Me file as a web page]( https://konturno.github.io/gallery-2020-01-11 "View file as a web page." ) </span>
+# [![](https://pushme-pullyou.github.io/tootoo-2021/lib/assets/icons/mark-github.svg )](https://github.com/konturno/konturno.github.io/ "Source code on GitHub" ) [Konturno 2021]( https://konturno.github.io/ "Home page" )
 
-
-<div><input type=button onclick="window.location.href='https://github.com/konturno/konturno.github.io/tree/master/gallery-2020-01-11'";
-value='You are now in a GitHub web page view - Click this button to view this read me file as source code' ></div>
-
-
-# [konturno gallery 2020-01-11]( #README.md )
 
 _"Konturno" means "contour" in Esperanto._
 
