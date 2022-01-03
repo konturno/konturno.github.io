@@ -7,7 +7,7 @@
 	<meta name="description"
 		content="konturno 2022 uses the GitHub API to provide access to all the current files in a repository hosted with GitHub Pages.">
 	<meta name="keywords" content="JavaScript,Markdown,GitHub,FOSS">
-	<meta name="date" content="2022-01-02">
+	<meta name="date" content="2022-01-03">
 	<title>konturno</title>
 
 	<!-- Copyright 2022 Theo Armour. MIT license -->
@@ -25,14 +25,7 @@
 
 <body>
 
-	<script src="https://pushme-pullyou.github.io/tootoo-2022/lib01/mnu-menu/r-2022-01-01/mnu-menu.js"></script>
-
-	<script src="https://pushme-pullyou.github.io/tootoo-2022/lib01/frx-file-read-xhr/r-2022-01-01/frx-file-read-xhr.js"></script>
-
-	<script src="https://pushme-pullyou.github.io/tootoo-2022/lib01/grv-github-repo-tree-view/r-2022-01-02/grv-github-repo-tree-view.js"></script>
-
-
-	<div id=MNUdivShowHide ></div>
+	<div id=MNUdivShowHide></div>
 
 
 	<main id=main>
@@ -57,13 +50,12 @@
 			iconInfo: `<img class=infoImg src="https://pushme-pullyou.github.io/tootoo-2022/assets/icons/noun_Information_585560.svg">`,
 			iconRepo: "❦",
 			title: document.title ? document.title : location.href.split( "/" ).pop().slice( 0, - 5 ).replace( /-/g, " " ),
-			urlSource: "https://github.com/konturno/konturno.github.io/", ////////////
+			urlSource: "https://github.com/konturno/konturno.github.io/", //////////// remember to update
 			version: document.head.querySelector( "[ name=date ]" ).content,
 
-
 			// Used by FRX
-			pathContent: "https://konturno.github.io/",
-			//pathContent: "./",
+			//pathContent: "https://konturno.github.io/",
+			pathContent: "./",
 
 			pathTooToo: "https://pushme-pullyou.github.io/tootoo-2022/",
 			//pathTooToo: "./",
@@ -73,31 +65,60 @@
 			defaultIgnoreFolders: [],
 			//defaultIgnoreFolders: [ "archive", "lib-templates" ],
 			filterFiles: [ "gif", "md", "html", "jpg", "license", "pdf", "png", "svg", "txt" ],
+			ignoreFiles: [ "404.html", "index.html", "LICENSE", "readme.html" ], // root only
 
 		};
 
 
-		init();
+		COR.scripts = [
+			"lib01/mnu-menu/r-2022-01-03/mnu-menu.js",
+			"lib01/frx-file-read-xhr/r-2022-01-03/frx-file-read-xhr.js",
+			"lib01/grv-github-repo-tree-view/r-2022-01-03/grv-github-repo-tree-view.js"
+		];
+
+		COR.loaded = 0;
+
+		COR.loading = function () {
+
+			COR.loaded++;
+			if ( COR.loaded === COR.scripts.length ) { init(); }
+
+		};
+
+		COR.loadLoaders = function () {
+
+			for ( let script of COR.scripts ) {
+
+				const load = document.body.appendChild( document.createElement( 'script' ) );
+				load.onload = COR.loading;
+				load.src = COR.pathTooToo + script;
+
+			}
+
+		};
+
+		COR.loadLoaders();
 
 
 		function init() {
 
-			// MNU = Menu ~ mnu-menu.js
+			// MNU => "Menu ~ mnu-menu.js"
 
 			MNU.init();
 			//MNU.getSample();
-			//sumNavMenu.hidden = false;
+			sumNavMenu.hidden = true;
 
 			//MNUaSource.hidden = true;
 			//MNUspnVersion.hidden = true;
 
-			// FRX = File Read XHR
+			// FRX => "File Read XHR"
 			FRX.init();
+			//FRX.getMenu();
 
 			// GR
 			//GRA.init();
 
-			//GRV = GitHub Repo View
+			//GRV => "GitHub Repo View"
 			//GRV.getFiles = GRV.getFilesCurated;
 			GRV.getFiles = GRV.getFilesAll;
 			GRV.init();
@@ -113,7 +134,7 @@
 
 			if ( location.protocol === "https:" ) {
 
-				if ( COR.version !== "2022-01-02" ) { window.history.pushState( "", "", "../" + location.hash ); }
+				window.history.pushState( "", "", "./" + location.hash );
 
 				COR.ignoreFolders = COR.defaultIgnoreFolders;
 
