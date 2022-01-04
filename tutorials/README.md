@@ -30,19 +30,19 @@ To get more things designed better, faster and cheaper
 
 ## The Lessons
 
-[Three.js Lesson 1]( https://konturno.github.io/#tutorials/threejs-lesson-01/ )
+[Three.js Lesson 1]( https://konturno.github.io/#tutorials/threejs-lesson-01/README.md )
 
 * Draw 3D boxes
 
-[Three.js Lesson 2]( https://konturno.github.io/tutorials/threejs-lesson-02/ )
+[Three.js Lesson 2]( https://konturno.github.io/tutorials/threejs-lesson-02/README.md )
 
 * Vary the dimensions and positions of 3D boxes
 
-[Three.js Lesson 3]( https://konturno.github.io/tutorials/threejs-lesson-03/ )
+[Three.js Lesson 3]( https://konturno.github.io/tutorials/threejs-lesson-03/README.md )
 
 * Draw arbitrary 3D shapes
 
-[Three.js Lesson 4 ! Parametric Components]( https://konturno.github.io/tutorials/threejs-lesson-04/ )
+[Three.js Lesson 4 ! Parametric Components]( https://konturno.github.io/tutorials/threejs-lesson-04/README.md )
 
 * Vary the dimensions and positions of arbitrary 3D Shapes
 
