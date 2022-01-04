@@ -1,8 +1,8 @@
 ﻿# [![](https://pushme-pullyou.github.io/tootoo-2022/assets/icons/mark-github.svg )](https://github.com/konturno/konturno.github.io/ "Source code on GitHub" ) [Konturno]( https://kionturno.github.io/ "Home page" ) / [Tutorials]( https://konturno.github.io/#tutorials/README.md) / [Three.js Lesson 1 Read Me]( https://konturno.github.io/#tutorials/threejs-lesson-01/readme.md )
 
-[Three.js Lesson 1 - just the drawing - Full Screen]( https://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html )
+### Three.js Lesson 1 - just the Web Page - [Full Screen]( https://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html )
 
-### _Three.js Lesson 1 - Code Edit View_ /  [Edit full screen]( https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html )
+### Three.js Lesson 1 - Web Page / Source Code /  [Edit Full Screen]( https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html )
 
 
 ## <center>Web Page / Source Code</center>
