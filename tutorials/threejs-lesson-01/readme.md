@@ -4,7 +4,7 @@
 
 ## <center>Web Page / Source Code</center>
 
-<iframe class=ifr src=http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html width=100% height=600px ></iframe>
+<iframe class=ifr src=https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html width=100% height=600px ></iframe>
 ### _Three.js Lesson 1 - Code Edit View_ /  [Edit full screen]( http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://konturno.github.io/tutorials/lessons/threejs-lesson-01/threejs-lesson-01.html )
 
 
