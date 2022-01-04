@@ -38,10 +38,6 @@
 	<script>
 
 		const COR = {
-			// Used by GRV
-			user: "konturno",
-			repo: "konturno.github.io",
-			branch: "master",
 
 			// Used by MNU ~ mnu-menu.js
 			description: document.head.querySelector( "[ name=description ]" ).content,
@@ -54,18 +50,22 @@
 			version: document.head.querySelector( "[ name=date ]" ).content,
 
 			// Used by FRX
+			defaultFile: "README.md",
 			//pathContent: "https://konturno.github.io/",
 			pathContent: "./",
 
 			pathTooToo: "https://pushme-pullyou.github.io/tootoo-2022/",
 			//pathTooToo: "./",
-			defaultFile: "README.md",
 
+			// Used by GRV
+			user: "konturno",
+			repo: "konturno.github.io",
+			branch: "master",
 			filesAll: true,
 			//defaultIgnoreFolders: [],
-			defaultIgnoreFolders: [ "archive", "lib-templates" ],
+			defaultIgnoreFolders: [ "archive", "templates" ],
 			filterFiles: [ "gif", "md", "html", "jpg", "license", "pdf", "png", "svg", "txt" ],
-			ignoreFiles: [ "404.html", "index.html", "LICENSE", "readme.html" ], // root only
+			ignoreFiles: [ "404.html", "index.html", "LICENSE", "readme.html" ],
 
 		};
 
