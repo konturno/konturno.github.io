@@ -1,17 +1,14 @@
-﻿<span style=display:none; >[You are now in a GitHub source code view - click this link to view this read me file as a web page]( https://konturno.github.io/tutorials/threejs-lesson-02/ "View file as a web page." ) </span>
-<input onclick=window.location.href='https://github.com/konturno/konturno.github.io/tree/master/tutorials/threejs-lesson-02/'; type=button  value='You are now in a GitHub web page view - Click this button to view this read me file as source code' />
+﻿# [![](https://pushme-pullyou.github.io/tootoo-2022/assets/icons/mark-github.svg )](https://github.com/konturno/konturno.github.io/ "Source code on GitHub" ) [Konturno]( https://kionturno.github.io/ "Home page" ) / [Tutorials]( https://konturno.github.io/#tutorials/README.md) / [Three.js Lesson 2 Read Me]( https://konturno.github.io/#tutorials/threejs-lesson-02/README.md )
 
-[Jaanga]( https://konturno.github.io ) » [Tutorials]( https://konturno.github.io/tutorials/ ) »
-[Three.js Lesson 2 Read Me]( index.html )
-===
+### Three.js Lesson 2 - just the Web Page - [Full Screen]( https://konturno.github.io/tutorials/threejs-lesson-02/threejs-lesson-02.html )
 
+### Three.js Lesson 1 - Web Page / Source Code /  [Edit Full Screen]( https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://konturno.github.io/tutorials/threejs-lesson-02/threejs-lesson-02.html )
 
-[Three.js Lesson 2 - just the drawing - Full Screen]( https://konturno.github.io/tutorials/threejs-lesson-02/threejs-lesson-02.html )
 
 ## <center>Web Page / Source Code</center>
 
-<iframe class=ifr src=https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://jaanga.github.io/tutorials/threejs-lesson-02/threejs-lesson-02.html width=100% height=600px ></iframe>
-###### _Three.js Lesson 2 - Code Edit View_ /  [Edit full screen]( https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://jaanga.github.io/tutorials/threejs-lesson-02/threejs-lesson-02.html )
+<iframe class=ifr src=https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://konturno.github.io/tutorials/threejs-lesson-02/threejs-lesson-02.html width=100% height=600px ></iframe>
+###### _Three.js Lesson 2 - Code Edit View_ /  [Edit full screen]( https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://konturno.github.io/tutorials/threejs-lesson-02/threejs-lesson-02.html )
 
 
 ## Concept
@@ -19,7 +16,7 @@
 ### Issues / Problems
 <!--
 
-The general format is an adaptation of the ideas developed in Alexander's _et al_ [A Patttern Language]( https://books.google.com/books?id=hwAHmktpk5IC&pg=PR10#v=onepage&q&f=false ) - as sammarized on page 10.
+The general format is an adaptation of the ideas developed in Alexander's _et al_ [A Patttern Language]( https://books.google.com/books?id=hwAHmktpk5IC&pg=PR10#v=onepage&q&f=false ) - as summarized on page 10.
 
 Each pattern describes a problem which occurs over and over again in our environment, and then describes the core of the solution to that problem, in such a way that you can use this solution a million times over, without ever doing it the same way twice.
 
