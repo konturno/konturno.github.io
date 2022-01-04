@@ -1,17 +1,17 @@
-﻿<span style=display:none; >[You are now in a GitHub source code view - click this link to view this read me file as a web page]( http://jaanga.github.io/tutorials/threejs-lesson-03/ "View file as a web page." ) </span>
-<input onclick=window.location.href='https://github.com/jaanga/jaanga.github.io/tree/master/tutorials/threejs-lesson-03/'; type=button  value='You are now in a GitHub web page view - Click this button to view this read me file as source code' />
+﻿<span style=display:none; >[You are now in a GitHub source code view - click this link to view this read me file as a web page]( https://konturno.github.io/tutorials/threejs-lesson-03/ "View file as a web page." ) </span>
+<input onclick=window.location.href='https://github.com/konturno/konturno.github.io/tree/master/tutorials/threejs-lesson-03/'; type=button  value='You are now in a GitHub web page view - Click this button to view this read me file as source code' />
 
-[Jaanga]( http://jaanga.github.io ) » [Tutorials]( http://jaanga.github.io/tutorials/ ) »
+[Jaanga]( https://konturno.github.io ) » [Tutorials]( https://konturno.github.io/tutorials/ ) »
 [Three.js Lesson 3 Read Me]( index.html )
 ===
 
 
-[Three.js Lesson 3 - just the drawing - Full Screen]( http://jaanga.github.io/tutorials/threejs-lesson-03/threejs-lesson-03.html )
+[Three.js Lesson 3 - just the drawing - Full Screen]( https://konturno.github.io/tutorials/threejs-lesson-03/threejs-lesson-03.html )
 
 ## <center>Web Page / Source Code</center>
 
-<iframe class=ifr src=http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://jaanga.github.io/tutorials/threejs-lesson-03/threejs-lesson-03.html width=100% height=600px ></iframe>  
-###### _Three.js Lesson 3 - Code Edit View: very alpha, use only for experiments_ / [Edit full screen]( http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://jaanga.github.io/tutorials/threejs-lesson-03/threejs-lesson-03.html )
+<iframe class=ifr src=https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://jaanga.github.io/tutorials/threejs-lesson-03/threejs-lesson-03.html width=100% height=600px ></iframe>
+###### _Three.js Lesson 3 - Code Edit View: very alpha, use only for experiments_ / [Edit full screen]( https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://jaanga.github.io/tutorials/threejs-lesson-03/threejs-lesson-03.html )
 
 
 ## Concept
@@ -75,12 +75,12 @@ Designers create cool apps so normal peeps have access to unique well designed p
 
 ## Contact
 
-* jaanga@googlegroups.com
-* https://github.com/jaanga/jaanga.github.io/issues
+* konturno@googlegroups.com
+* https://github.com/konturno/konturno.github.io/issues
 
 ## Copyright and License
 
-* [Copyright and License]( http://jaanga.github.io/#http://jaanga.github.io/jaanga-copyright-and-mit-license.md ) 
+* [Copyright and License]( https://konturno.github.io/#https://konturno.github.io/konturno-copyright-and-mit-license.md )
 
 ***
 
