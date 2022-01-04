@@ -61,8 +61,9 @@
 			//pathTooToo: "./",
 			defaultFile: "README.md",
 
+			filesAll: true,
 			//defaultIgnoreFolders: [],
-			defaultIgnoreFolders: [ "archive", "templates"],
+			defaultIgnoreFolders: [ "archive", "lib-templates" ],
 			filterFiles: [ "gif", "md", "html", "jpg", "license", "pdf", "png", "svg", "txt" ],
 			ignoreFiles: [ "404.html", "index.html", "LICENSE", "readme.html" ], // root only
 
@@ -118,8 +119,8 @@
 			//GRA.init();
 
 			//GRV => "GitHub Repo View"
-			GRV.getFiles = GRV.getFilesCurated;
-			// = GRV.getFilesAll;
+			//GRV.getFiles = GRV.getFilesCurated;
+			//GRV.getFiles = GRV.getFilesAll;
 			GRV.init();
 			//GRVdivIntro.hidden = true;
 			//GRVsumRepo.hidden = true;
