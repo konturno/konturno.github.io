@@ -1,11 +1,11 @@
 ﻿# [![](https://pushme-pullyou.github.io/tootoo-2022/assets/icons/mark-github.svg )](https://github.com/konturno/konturno.github.io/ "Source code on GitHub" ) [Konturno]( https://kionturno.github.io/ "Home page" ) / [Tutorials]( https://konturno.github.io/#tutorials/README.md) / [Three.js Lesson 1 Read Me]( https://konturno.github.io/#tutorials/threejs-lesson-01/readme.md )
 
-[Three.js Lesson 1 - just the drawing - Full Screen]( http://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html )
+[Three.js Lesson 1 - just the drawing - Full Screen]( https://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html )
 
 ## <center>Web Page / Source Code</center>
 
-<iframe class=ifr src=https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html width=100% height=600px ></iframe>
-### _Three.js Lesson 1 - Code Edit View_ /  [Edit full screen]( http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://konturno.github.io/tutorials/lessons/threejs-lesson-01/threejs-lesson-01.html )
+<iframe class=ifr src=https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html width=100% height=600px ></iframe>
+### _Three.js Lesson 1 - Code Edit View_ /  [Edit full screen]( https://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#https://konturno.github.io/tutorials/lessons/threejs-lesson-01/threejs-lesson-01.html )
 
 
 ## Concept
@@ -91,7 +91,7 @@ A bit harder - do these only if you have the time
 
 ## Copyright and License
 
-* [Copyright and License]( http://konturno.github.io/#LICENSE )
+* [Copyright and License]( https://konturno.github.io/#LICENSE )
 
 ***
 
