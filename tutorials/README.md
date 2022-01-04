@@ -12,6 +12,7 @@ _"Tutorials" in a resizable window. One finger to rotate. Two to zoom._
 ## Concept
 
 
+
 ## To Do / Wish List
 
 
@@ -19,6 +20,25 @@ _"Tutorials" in a resizable window. One finger to rotate. Two to zoom._
 
 
 ## Links of Interest
+
+### Free Code Camp
+
+* https://www.freecodecamp.com
+* As of 2017 this is the hot place to be; ditto 2022
+* Both online and and local
+* Good presence on Twitter, Facebook,Instagram etc
+* Based/hosted on GitHub - which is the place to be for coders
+
+See also:
+* https://medium.freecodecamp.com/
+* https://github.com/freecodecamp
+* And all the other venues: https://www.freecodecamp.com/about/
+
+
+### [Learning to Program]( https://docs.google.com/document/d/1qSn_HibbOF-giNUv9OHf4eeUSo9rU2bRSTATQEL8Y0M/edit?usp=sharing )
+
+A document that I have been updating for over ten years. Always out of date. Always with someyhing of interest
+
 
 
 ## Change Log
