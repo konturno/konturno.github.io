@@ -38,12 +38,12 @@
 
 		menu = document.body.appendChild( document.createElement( 'div' ) );
 		menu.style.cssText = 'margin: 0 20px; position: absolute; ';
-		menu.innerHTML = 
+		menu.innerHTML =
 
 // start menu text with back quote
 
 `
-			<h2> 
+			<h2>
 
 				${ document.title } <a id=aa href=http://jaanga.github.io/tutorials/threejs-lesson-02/ > 🛈<a>
 				<br>
@@ -51,9 +51,9 @@
 
 			</h2>
 
-			<p><input type=range id=inpWidth min=5 max=50 step=0.5 value=30 oninput=drawShapes(); > 
+			<p><input type=range id=inpWidth min=5 max=50 step=0.5 value=30 oninput=drawShapes(); >
 				Width</p>
-			<p><input type=range id=inpHeight min=5 max=50 step=1 value=25 oninput=drawShapes(); > 
+			<p><input type=range id=inpHeight min=5 max=50 step=1 value=25 oninput=drawShapes(); >
 				Height</p>
 			<p><input type=range id=inpDepth min=5 max=50 step=0.5 value=25 oninput=drawShapes(); >
 				Depth</p>
@@ -83,8 +83,8 @@
 
 // helpers
 
-		var axisHelper = new THREE.AxisHelper( 50 );
-		scene.add( axisHelper );
+		var axesHelper = new THREE.AxesHelper( 50 );
+		scene.add( axesHelper );
 
 // assets
 
@@ -102,8 +102,8 @@
 		var height = inpHeight.valueAsNumber;
 		var depth = inpDepth.valueAsNumber;
 		var thickness = inpThickness.valueAsNumber;
-		var tabWidth = inpTabWidth.valueAsNumber; 
-		var tabHeight = inpTabHeight.valueAsNumber; 
+		var tabWidth = inpTabWidth.valueAsNumber;
+		var tabHeight = inpTabHeight.valueAsNumber;
 		var v2 = function( x, y ){ return new THREE.Vector2( x, y ); };
 		var material = new THREE.MeshNormalMaterial( { side: 2, wireframe: false } );
 
@@ -125,7 +125,7 @@
 		back = new THREE.Shape();
 		back.fromPoints( [
 
-			v2( 0, 0 ), v2( width - tabWidth, 0 ), v2( width - tabWidth, tabHeight ), v2( width, tabHeight ),  
+			v2( 0, 0 ), v2( width - tabWidth, 0 ), v2( width - tabWidth, tabHeight ), v2( width, tabHeight ),
 			v2( width, height ), v2( 0, height )
 
 		] );

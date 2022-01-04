@@ -36,13 +36,13 @@
 
 		menu = document.body.appendChild( document.createElement( 'div' ) );
 		menu.style.cssText = 'margin: 0 20px; position: absolute; ';
-		menu.innerHTML = 
+		menu.innerHTML =
 
 // start menu text with back quote
 
 `
 
-			<h2> 
+			<h2>
 
 				${ document.title } <a id=aa href=http://jaanga.github.io/tutorials/threejs-lesson-03/ >🛈<a>
 				<br>
@@ -66,8 +66,8 @@
 
 // helpers
 
-		var axisHelper = new THREE.AxisHelper( 50 );
-		scene.add( axisHelper );
+		var axesHelper = new THREE.AxesHelper( 50 );
+		scene.add( axesHelper );
 
 // assets
 		material = new THREE.MeshNormalMaterial( { side: 2 } );
