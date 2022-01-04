@@ -1,11 +1,11 @@
 # [![](https://pushme-pullyou.github.io/tootoo-2021/lib/assets/icons/mark-github.svg )](https://github.com/konturno/konturno.github.io/ "Source code on GitHub" ) [Konturno 2021]( https://kionturno.github.io/ "Home page" ) / [Tutorials Read Me]( https://konturno.github.io/#tutorials/README.md)
 
 
-<!-- @@@
-<div class=iframe-resize ><iframe src=https://konturno.github.io/ tutorials/ height=100% width=100% ></iframe></div>
+<!--@@@
+<div class=iframe-resize ><iframe src=https://konturno.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html height=100% width=100% ></iframe></div>
 _"Tutorials" in a resizable window. One finger to rotate. Two to zoom._
 ## Full Screen: [Tutorials]( https://konturno.github.io/tutorials/ )
-@@@ -->
+@@@-->
 
 
 
@@ -30,7 +30,7 @@ To get more things designed better, faster and cheaper
 
 ## The Lessons
 
-[Three.js Lesson 1]( http://konturno.github.io/tutorials/threejs-lesson-01/ )
+[Three.js Lesson 1]( http://konturno.github.io/#tutorials/threejs-lesson-01/ )
 
 * Draw 3D boxes
 
