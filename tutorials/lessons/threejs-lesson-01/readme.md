@@ -1,17 +1,11 @@
-﻿<span style=display:none; >[You are now in a GitHub source code view - click this link to view this read me file as a web page]( http://jaanga.github.io/tutorials/threejs-lesson-01/ "View file as a web page." ) </span>
-<input onclick=window.location.href='https://github.com/jaanga/jaanga.github.io/tree/master/tutorials/threejs-lesson-01/'; type=button  value='You are now in a GitHub web page view - Click this button to view this read me file as source code' />
+﻿# [![](https://pushme-pullyou.github.io/tootoo-2021/lib/assets/icons/mark-github.svg )](https://github.com/konturno/konturno.github.io/ "Source code on GitHub" ) [Konturno 2021]( https://kionturno.github.io/ "Home page" ) / [Tutorials]( https://konturno.github.io/#tutorials/README.md) / [Three.js Lesson 1 Read Me]( https://konturno.github.io/#tutorials/lessons/threejs-lesson-01/readme.md )
 
-[Jaanga]( http://jaanga.github.io ) » [Tutorials]( http://jaanga.github.io/tutorials/ ) »
-[Three.js Lesson 1 Read Me]( ./index.html#readme.md )
-===
-
-
-[Three.js Lesson 1 - just the drawing - Full Screen]( http://jaanga.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html )
+[Three.js Lesson 1 - just the drawing - Full Screen]( http://konturno.github.io/tutorials/lessons/threejs-lesson-01/threejs-lesson-01.html )
 
 ## <center>Web Page / Source Code</center>
 
-<iframe class=ifr src=http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://jaanga.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html width=100% height=600px ></iframe>  
-###### _Three.js Lesson 1 - Code Edit View_ /  [Edit full screen]( http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://jaanga.github.io/tutorials/threejs-lesson-01/threejs-lesson-01.html )
+<iframe class=ifr src=http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://konturno.github.io/tutorials/lessons/threejs-lesson-01/threejs-lesson-01.html width=100% height=600px ></iframe>
+###### _Three.js Lesson 1 - Code Edit View_ /  [Edit full screen]( http://jaanga.github.io/cookbook-html/templates/code-edit-view/code-edit-view-r2.html#http://konturno.github.io/tutorials/lessons/threejs-lesson-01/threejs-lesson-01.html )
 
 
 ## Concept
@@ -27,7 +21,7 @@ patterns are descriptions of common problems and proposal for the solutions that
 
 -->
 
-If you are a an engineer or designer, the first thing you want to do is to create or edit new things. 
+If you are a an engineer or designer, the first thing you want to do is to create or edit new things.
 
 ### Mission
 <!-- a statement of a rationale, applicable now as well as in the future -->
@@ -79,11 +73,11 @@ A bit harder - do these only if you have the time
 ## Issues / Things to note
 
 * These lessons are built and test on the Google Chrome browse. They may/will have issues on other browsers
-	* Let us know if you really must use another browser and we will try to help 
+	* Let us know if you really must use another browser and we will try to help
 * Three.js inserts objects using the center point of the object - not using a corner as most CAD apps do
 * Three.js uses traditional computer graphics XYZ - the Z comes out of the screen and the Y points up
 * Any HTML file you download, can be clicked on to view in your browser
- 
+
 
 
 ## Sources
@@ -93,12 +87,11 @@ A bit harder - do these only if you have the time
 
 ## Contact
 
-* jaanga@googlegroups.com
-* https://github.com/jaanga/jaanga.github.io/issues
+* https://github.com/konturno/konturno.github.io/issues
 
 ## Copyright and License
 
-* [Copyright and License]( http://jaanga.github.io/#http://jaanga.github.io/jaanga-copyright-and-mit-license.md ) 
+* [Copyright and License]( http://konturno.github.io/#LICENSE )
 
 ***
 
