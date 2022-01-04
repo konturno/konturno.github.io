@@ -13,7 +13,9 @@ _"Tutorials" in a resizable window. One finger to rotate. Two to zoom._
 
 
 Learning how to program is an educational process.
+
 As with most educational processes, the task is to open up your mind to new ways of thinking.
+
 The processes, however, may take a long time, have many false directions and much effort may end up not being that useful.
 
 ### Mission
