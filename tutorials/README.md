@@ -8,15 +8,15 @@ _"Tutorials" in a resizable window. One finger to rotate. Two to zoom._
 @@@-->
 
 
-
+<!--
 ## Concept
-
 
 Learning how to program is an educational process.
 
 As with most educational processes, the task is to open up your mind to new ways of thinking.
 
 The processes, however, may take a long time, have many false directions and much effort may end up not being that useful.
+-->
 
 ### Mission
 <!-- a statement of a rationale, applicable now as well as in the future -->
@@ -29,6 +29,8 @@ To create a just-in-time free, open source learning system, where you learn just
 To get more things designed better, faster and cheaper
 
 ## The Lessons
+
+_2022-01-04 ~ the examples are from a few years ago. They need some updating but not much._
 
 [Three.js Lesson 1]( https://konturno.github.io/#tutorials/threejs-lesson-01/README.md )
 
@@ -82,6 +84,20 @@ Three.js Lesson 10: TBD
 
 ## Links of Interest
 
+### Three.js
+
+* https://threejs.org/
+* https://threejs.org/examples/
+* https://threejs.org/docs/
+* https://threejs.org/docs/#api/en/math/Vector3
+
+Interesting linear algebra utilities
+
+* https://threejs.org/docs/#api/en/math/Plane
+* https://threejs.org/docs/#api/en/math/Ray
+* https://threejs.org/docs/#api/en/math/Vector3
+
+
 ### Free Code Camp
 
 * https://www.freecodecamp.com
@@ -96,14 +112,19 @@ See also:
 * And all the other venues: https://www.freecodecamp.com/about/
 
 
-### [Learning to Program]( https://docs.google.com/document/d/1qSn_HibbOF-giNUv9OHf4eeUSo9rU2bRSTATQEL8Y0M/edit?usp=sharing )
+### Learning to Program
 
-A document that I have been updating for over ten years. Always out of date. Always with someyhing of interest
+* Google Doc: [Learning to Program]( https://docs.google.com/document/d/1qSn_HibbOF-giNUv9OHf4eeUSo9rU2bRSTATQEL8Y0M/edit?usp=sharing )
+
+A document that I have been updating for over ten years. Always out of date. Always with something of interest
 
 
 
 ## Change Log
 
+### 2022-01-04
+
+* major cleanup
 
 ### 2022-01-03
 
