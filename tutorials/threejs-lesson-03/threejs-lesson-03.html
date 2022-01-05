@@ -130,8 +130,8 @@
 		shape.moveTo( 40, -20 );
 		shape.moveTo( 40, -10 );
 
-		geometry = new THREE.ShapeGeometry( shape );
-		geometry = shape.extrude( { amount: thickness, bevelEnabled: false } );
+		const extrudeSettings = { depth: thickness, bevelEnabled: false }
+		geometry = new THREE.ExtrudeGeometry( shape, extrudeSettings );
 		mesh = new THREE.Mesh( geometry, material ) ;
 
 		mesh.position.set( 50, 10, 0 );
