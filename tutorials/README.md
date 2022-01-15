@@ -103,7 +103,6 @@ Interesting linear algebra utilities
 * https://r105.threejsfundamentals.org/
 * https://nataliiafrank.com/blog/my-path-to-threejs/
 * https://medium.com/@benjamin.c.coleman/the-beginners-guide-to-beginning-three-js-c36b8947c2aa
-* 
 
 ### Free Code Camp
 
