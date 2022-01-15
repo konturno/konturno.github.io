@@ -89,6 +89,7 @@ Three.js Lesson 10: TBD
 * https://threejs.org/
 * https://threejs.org/examples/
 * https://threejs.org/docs/
+    * https://threejs.org/manual/#en/fundamentals
 * https://threejs.org/docs/#api/en/math/Vector3
 
 Interesting linear algebra utilities
@@ -97,6 +98,12 @@ Interesting linear algebra utilities
 * https://threejs.org/docs/#api/en/math/Ray
 * https://threejs.org/docs/#api/en/math/Vector3
 
+### Learning resources
+
+* https://r105.threejsfundamentals.org/
+* https://nataliiafrank.com/blog/my-path-to-threejs/
+* https://medium.com/@benjamin.c.coleman/the-beginners-guide-to-beginning-three-js-c36b8947c2aa
+* 
 
 ### Free Code Camp
 
