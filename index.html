@@ -7,11 +7,11 @@
 	<meta name="description"
 		content="konturno 2022 uses the GitHub API to provide access to all the current files in a repository hosted with GitHub Pages.">
 	<meta name="keywords" content="JavaScript,Markdown,GitHub,FOSS">
-	<meta name="date" content="2022-01-03">
+	<meta name="date" content="2022-02-22">
 	<title>konturno</title>
 
 	<!-- Copyright 2022 Theo Armour. MIT license -->
-	<link id=CORstyle rel="stylesheet" href="https://pushme-pullyou.github.io/tootoo-2022/lib01/style/style-2022-01-01.css">
+	<link id=CORstyle rel="stylesheet" href="https://pushme-pullyou.github.io/tootoo-2022/lib02/style/r-2022-02-21/style.css">
 
 	<style>
 		:root {
@@ -61,19 +61,23 @@
 			user: "konturno",
 			repo: "konturno.github.io",
 			branch: "master",
-			filesAll: true,
+
 			//defaultIgnoreFolders: [],
-			defaultIgnoreFolders: [ "archive", "templates" ],
-			filterFiles: [ "gif", "md", "html", "jpg", "license", "pdf", "png", "svg", "txt" ],
-			ignoreFiles: [ "404.html", "index.html", "LICENSE", "readme.html" ],
+			defaultIgnoreFolders: [ "archive", "lib-templates" ], // curated
+
+			filesAll: true,
+			filterFiles: [ "gif", "md", "html", "jpg", "LICENSE", "pdf", "png", "svg", "txt", "xlsx", "" ], // curated
+			ignoreFiles: [ "404.html", "index.html", "LICENSE", "readme.html" ], // curated
 
 		};
 
 
 		COR.scripts = [
-			"lib01/mnu-menu/r-2022-01-03/mnu-menu.js",
-			"lib01/frx-file-read-xhr/r-2022-01-03/frx-file-read-xhr.js",
-			"lib01/grv-github-repo-tree-view/r-2022-01-03/grv-github-repo-tree-view.js"
+			"lib02/mnu-menu/r-2022-02-20/mnu-menu.js",
+			"lib02/frx-file-read-xhr/r-2022-02-22/frx-file-read-xhr.js",
+			"lib02/grv-github-repo-tree-view/r-2022-02-13/grv-github-repo-tree-view.js",
+			//"lib02/ckeditor/ckeditor5-32.0.0-gsw55qtixqey/build/ckeditor.js",
+			//"lib02/cke-put-github/2022-02-07/cke-ckeditor-put-github.js"
 		];
 
 		COR.loaded = 0;
@@ -106,22 +110,23 @@
 
 			MNU.init();
 			//MNU.getSample();
-			sumNavMenu.hidden = true;
+			//sumNavMenu.hidden = true;
 
 			//MNUaSource.hidden = true;
 			//MNUspnVersion.hidden = true;
 
 			// FRX => "File Read XHR"
 			FRX.init();
-			//FRX.getMenu();
+			FRX.getMenu();
 
-			// GR
+			// GRA
 			//GRA.init();
 
 			//GRV => "GitHub Repo View"
 			//GRV.getFiles = GRV.getFilesCurated;
 			//GRV.getFiles = GRV.getFilesAll;
 			GRV.init();
+
 			//GRVdivIntro.hidden = true;
 			//GRVsumRepo.hidden = true;
 			//GRVbutMenu.hidden = true;
